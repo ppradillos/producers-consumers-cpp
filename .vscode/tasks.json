@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Producers_Consumers project (C/C++)",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-I${workspaceFolder}/include",
+				"-fdiagnostics-color",
+				"-fexceptions",
+				"-std=c++14",
+				"-Wall",
+				"-Wextra",
+				"-pedantic",
+				"-Werror",
+				"-pie",
+				"-g",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/producers_consumers",
+				"-lpthread"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/cpp"
+		}
+	]
+}
