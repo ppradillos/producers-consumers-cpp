@@ -2,6 +2,11 @@
 
 #include <string>
 
+/** @class Product
+ * @brief Data structure composed by name, version and manufacturer. Created by producers, consumed by consumers.
+ * 
+ */
+
 class Product
 {
 protected:
