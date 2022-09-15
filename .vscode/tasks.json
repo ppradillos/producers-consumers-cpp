@@ -2,8 +2,8 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cppbuild",
-			"label": "Producers_Consumers project (C/C++)",
+			"type": "shell",
+			"label": "Producers_Consumers project Debug build",
 			"command": "/usr/bin/g++",
 			"args": [
 				"-I${workspaceFolder}/include",
@@ -17,6 +17,7 @@
 				"-Werror",
 				"-pie",
 				"-g",
+				"-O0",
 				"${workspaceFolder}/src/*.cpp",
 				"-o",
 				"${workspaceFolder}/bin/producers_consumers",
@@ -32,7 +33,37 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: /usr/bin/cpp"
+			"detail": "Debug build with compiler: /usr/bin/g++"
+		},
+		{
+			"type": "shell",
+			"label": "Producers_Consumers project Release build",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-I${workspaceFolder}/include",
+				"-fdiagnostics-color",
+				"-fPIC",
+				"-fexceptions",
+				"-std=c++14",
+				"-Wall",
+				"-Wextra",
+				"-pedantic",
+				"-Werror",
+				"-Wconversion",
+				"-pie",
+				"-g0",
+				"-O2",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/producers_consumers"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Release build with compiler: /usr/bin/g++"
 		}
 	]
 }
