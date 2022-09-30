@@ -34,4 +34,4 @@ Some JSON files are provided to build the program in VS Code. They are located i
 A thread wrapper implementation to make easier the testing process. So, the user will not call the STL API straight away by themselves, but only a "runThread"-style function.
 
 ## License
-None. 
+MIT 
